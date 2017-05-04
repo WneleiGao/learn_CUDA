@@ -1,15 +1,15 @@
-#include "/home/ywang15/Documents/coda/cuda/cuda_by_example/common/book.h"
+#include "/home/ywang15/Documents/code/cuda/cuda_by_example/common/book.h"
 
 #include <iostream>
 
 #define N 100
 
 __global__ void add(int *a, int *b, int *c){
-    tid = blockIdx.x;
+    int tid = blockIdx.x;
     c[tid] = a[tid] + b[tid];
 }
 
-void main(void){
+int main(void){
     int a[N], b[N], c[N];
     int *d_a, *d_b, *d_c;
 
@@ -35,4 +35,6 @@ void main(void){
     cudaFree(d_a);
     cudaFree(d_b);
     cudaFree(d_c);
+    
+    return 0;
 }
