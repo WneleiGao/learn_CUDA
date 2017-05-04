@@ -14,7 +14,7 @@ void main(void){
 
     for (int i=0; i<N; i++){
         a[i] = i+1;
-        b[i] = 2*(i+1);
+        b[i] = i+1;
     }
 
     HANDLE_ERROR( cudaMalloc( (void **)&d_a, sizeof(int)*N ) );
