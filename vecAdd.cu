@@ -1,4 +1,5 @@
-#include "/home/ywang15/Documents/cuda/cuda_by_examples/common/book.h"
+#include "/home/ywang15/Documents/coda/cuda/cuda_by_example/common/book.h"
+
 #include <iostream>
 
 #define N 100
